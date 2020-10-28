@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "outDir": "lib/",
+    "sourceMap": true,
+    "target": "ES6",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "declaration": true,
+    "allowJs": true
+  },
+  "files": ["./src/index.ts"],
+  "exclude": ["node_modules", "lib"]
+}
