@@ -1,15 +1,21 @@
 {
   "name": "nms-package-common",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Common functionality to be shared across NodeJS TypeScript microservices.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "files": ["lib/"],
+  "files": [
+    "lib/"
+  ],
   "scripts": {
     "build": "tsc"
   },
-  "author": "Aaron Yarborough",
+  "author": "AaronJY",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/AaronJY/nms-package-common.git"
+  },
   "devDependencies": {
     "@types/express": "^4.17.6",
     "@types/mongodb": "^3.5.8",
