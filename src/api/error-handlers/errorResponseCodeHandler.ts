@@ -2,6 +2,7 @@ import { NextFunction, Request, Response } from 'express';
 import { NotFoundError } from '../../errors/notFoundError';
 import { JsonPatchError } from 'fast-json-patch';
 import { ConflictError } from '../../errors/conflictError';
+import { BadRequestError } from '../../errors/badRequestError';
 
 export function errorResponseCodeHandler(err: Error, req: Request, resp: Response, next: NextFunction): void {
     if (err instanceof NotFoundError) {
@@ -10,10 +11,11 @@ export function errorResponseCodeHandler(err: Error, req: Request, resp: Respons
         resp.status(409);
     } else if (err instanceof JsonPatchError) {
         resp.status(400);
+    } else if (err instanceof BadRequestError) {
+        resp.status(400);
     } else {
         resp.status(500);
     }
-
-
+    
     next(err);
 }
